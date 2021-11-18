@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>查找元素</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="t1">我是title</h1>
+      <p class="t2">段落段落</p>
+      <span class="t1">我是span</span>
+    </div>
+    <div>this is div</div>
+    <p class="abc">abc1</p>
+    <p class="abc">abc2</p>
+    <input type="text" name="user" />
+    <input type="text" name="user" />
+    <script>
+      // getElementById 根据元素id获取元素
+      const app = document.getElementById('app')
+      console.log(app)
+
+      // getElementsByTagName 根据标签名获取元素 一个HTML元素集合  HTMLCollection 他是一个动态的集合，也就是说会自动更新，如果将来某个元素
+      // 删除了，那么就自动剔除不用再获取
+      const divs = document.getElementsByTagName('div')
+      console.log(divs)
+
+      // getElementsByClassName 根据类名获取元素 HTMLCollection
+
+      const abc = document.getElementsByClassName('abc')
+      console.log(abc)
+
+      // getElementsByName 根据名称属性获取元素 NodeList
+
+      const input = document.getElementsByName('user')
+      console.log(input)
+      document.body.removeChild(input[1])
+      console.log(input)
+
+      // querySelector 根据css选择器获取元素 只能获取到满足条件的第一个元素
+
+      const div1 = document.querySelector('#app')
+
+      console.log(div1)
+
+      // querySelectorAll 根据css选择器获取所有满足条件的元素
+
+      const el = document.querySelectorAll('.t1')
+      console.log(el)
+
+      const t2 = document.querySelector('.t2')
+      // 查找元素的父元素
+      const parent = t2.parentElement
+      console.log(parent)
+      // 查找子元素
+      const children = app.children
+      console.log(children)
+
+      // 查找前一个兄弟元素
+
+      const prev = t2.previousElementSibling
+      console.log(prev)
+
+      // 查找下一个兄弟元素
+
+      const next = t2.nextElementSibling
+      console.log(next)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node节点</title>
+  </head>
+  <body>
+    <script>
+      const node = document
+      console.log('节点类型', node.nodeType)
+
+      console.log('元素节点类型', Node.ELEMENT_NODE)
+      console.log('文本节点类型', Node.TEXT_NODE)
+      console.log('注释节点类型', Node.COMMENT_NODE)
+      console.log('文档节点类型', Node.DOCUMENT_NODE)
+      console.log('属性节点类型', Node.ATTRIBUTE_NODE)
+      console.log('文档片段节点类型', Node.DOCUMENT_FRAGMENT_NODE)
+      console.log('文档类型节点类型', Node.DOCUMENT_TYPE_NODE)
+
+      console.log('父节点', node.parentNode)
+      console.log('子节点', node.childNodes)
+      console.log('第一个子节点', node.firstChild)
+      console.log('最后一个子节点', node.lastChild)
+      console.log('前一个兄弟节点', node.previousSibling)
+      console.log('后一个兄弟节点', node.nextSibling)
+    </script>
+  </body>
+</html>
